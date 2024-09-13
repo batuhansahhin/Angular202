@@ -1,0 +1,19 @@
+<p>model-driven works!</p>
+ 
+<form [formGroup]="frm" (ngSubmit)="frm.value">
+    <input type="text" placeholder="name" formControlName="name"><br>
+    <input type="text" placeholder="surname" formControlName="surname"><br>
+    <input type="text" placeholder="email" formControlName="email"><br>
+    <input type="text" placeholder="tel" formControlName="tel"><br>
+    <div formGroupName="address">
+        <input type="text" placeholder="county" formControlName="county"><br>
+        <input type="text" placeholder="city" formControlName="city"><br>
+        <input type="text" placeholder="address" formControlName="address"><br>
+
+    </div>
+    <button>Send</button>
+</form>
+
+<button (click)="Ok()">Ok</button>
+
+Valid: {{frm.valid}}
